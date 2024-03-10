@@ -1,7 +1,0 @@
-# Supported currencies
-enum Currency {
-    # Swiss Franc
-    CHF
-    # United States Dollar
-    USD
-}
