@@ -6,4 +6,12 @@ server:
   http2:
     enabled: true
 
-
+graphql:
+  playground:
+    endpoint: /graphql
+    subscriptionEndpoint: /subscriptions
+    enabled: true
+    pageTitle: Playground
+    cdn:
+      enabled: false
+      version: latest
