@@ -7,6 +7,8 @@ server:
     enabled: true
 
 graphql:
+  servlet:
+    maxQueryDepth: 5
   playground:
     endpoint: /graphql
     subscriptionEndpoint: /subscriptions
@@ -15,3 +17,28 @@ graphql:
     cdn:
       enabled: false
       version: latest
+    headers:
+      Authorization: Bearer TOKEN
+    tabs:
+      - name: Bank account sample query
+        query: classpath:playground/bank_account.graphql
+        variables: classpath:playground/bank_account_variables.json
+
+  voyager:
+    enabled: true
+    basePath: /
+    mapping: /voyager
+    endpoint: /graphql
+    cdn:
+      enabled: false
+      version: latest
+    pageTitle: Voyager
+    displayOptions:
+      skipRelay: true
+      skipDeprecated: true
+      rootType: Query
+      sortByAlphabet: false
+      showLeafFields: true
+      hideRoot: false
+    hideDocs: false
+    hideSettings: false

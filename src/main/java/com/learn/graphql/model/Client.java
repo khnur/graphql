@@ -3,12 +3,14 @@ package com.learn.graphql.model;
 import lombok.Builder;
 import lombok.Value;
 
+import java.util.List;
 import java.util.UUID;
 
 @Value
 @Builder
-public class BankAccount {
+public class Client {
     UUID id;
-    Client client;
-    Currency currency;
+    String name;
+    String surname;
+    List<String> middleNames;
 }
