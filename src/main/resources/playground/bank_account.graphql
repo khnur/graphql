@@ -2,8 +2,13 @@ query GET_BANK_ACCOUNT($id: ID) {
     bankAccount(id: $id) {
         id
         client {
+            id
             name
             surname
+        }
+        currency
+        assets {
+            id
         }
     }
 }
