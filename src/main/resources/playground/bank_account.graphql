@@ -17,5 +17,9 @@ mutation CREATE_BANK_ACCOUNT {
     createBankAccount(input: {name: "Nurzhan"}) {
         id
         currency
+        client {
+            id
+            name
+        }
     }
 }
